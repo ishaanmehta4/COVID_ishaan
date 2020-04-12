@@ -19,10 +19,7 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-  <script type="text/javascript">
-    function noenter() {
-      return !(window.event && window.event.keyCode == 13); }
-    </script>
+
 </head>
 
 <body id="page-top">
@@ -118,11 +115,11 @@
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text"  id="sbox"onkeypress="return noenter()"  class="form-control bg-light border-0 small" placeholder="Search for Statistics"
+              <input type="text"   id="sbox"onkeypress="return noenter()"  class="form-control bg-light border-0 small" placeholder="Search for Statistics"
                 aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <a id="go" href="">
-                  <button class="btn btn-danger" type="button">
+                  <button onclick="searc()" class="btn btn-danger" type="button">
                   <i class="fas fa-search fa-sm"></i>
                 </button></a>
               </div>
@@ -160,31 +157,28 @@
                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
           </div>
 
-          <!-- stats tics section starts -->
+         <!-- stats tics section starts -->
 
-          <!-- searchabr -->
-          <div class="card shadow bg-gray-400 mb-4">
-            <div class="card-header py-3">
-              <h4 class="m-0 font-weight-bold text-danger" id="thead">Search statistics of any country</h4>
-            </div>
-            <form class="d-none d-sm-inline-block form-inline mr-5 ml-5 mb-4 mt-3 navbar-search">
-              <div class="input-group">
-                <input type="text" class="form-control bg-white border-0 small" placeholder="Search for Statistics"
-                  aria-label="Search" id="sbox"onkeypress="return noenter()" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <a id="go" href="">
-                  <button class="btn btn-danger" id="statsubmit" type="button" onclick="searc()">
-
-                    <i class="fas fa-search fa-sm"></i>
-                  </button></a>
-                </div>
-              </div>
-            </form>
-          </div>
-          <!-- end searchbar -->
+         
+         
+<!-- DataTable -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary" id="thead"></h6>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+         
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- table end -->
 
 
-          <!-- stats section end -->
+         <!-- stats section end -->
 
         </div>
         <!-- /.container-fluid -->
@@ -233,8 +227,6 @@
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
   <script src="myjs/statsjs.js"></script>
-  
-  
   <script>
     function searc()
     {
