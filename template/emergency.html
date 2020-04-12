@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>CoronaSite Statistics</title>
+  <title>CoronaSite Emergency</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,10 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+  <script type="text/javascript">
+    function noenter() {
+      return !(window.event && window.event.keyCode == 13); }
+    </script>
 </head>
 
 <body id="page-top">
@@ -48,14 +51,14 @@
           <span>Home</span></a>
       </li>
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="statisticsMY.html">
           <i class="fas fa-fw fa-question-circle"></i>
           <span>Statistics</span></a>
       </li>
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item ">
-        <a class="nav-link" href="emergency.html">
+      <li class="nav-item active">
+        <a class="nav-link " href="emergency.html">
           <i class="fas fa-fw fa-comment-medical"></i>
           <span>Contact Helpline</span></a>
       </li>
@@ -115,11 +118,11 @@
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text"   id="sbox"onkeypress="return noenter()"  class="form-control bg-light border-0 small" placeholder="Search for Statistics"
+              <input type="text"  id="sbox"onkeypress="return noenter()"  class="form-control bg-light border-0 small" placeholder="Search for Statistics"
                 aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <a id="go" href="">
-                  <button onclick="searc()" class="btn btn-danger" type="button">
+                  <button class="btn btn-danger" type="button">
                   <i class="fas fa-search fa-sm"></i>
                 </button></a>
               </div>
@@ -152,33 +155,64 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h2 mb-0 text-gray-800">Statistics</h2>
+            <h1 class="h2 mb-0 text-gray-800">Emergency Contact Information</h2>
               <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
           </div>
 
-         <!-- stats tics section starts -->
+          <!-- contact section starts -->
 
-         
-         
-<!-- DataTable -->
-<div class="card shadow mb-4">
-  <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary" id="thead"></h6>
-  </div>
-  <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-         
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-<!-- table end -->
+          <!-- Helpline Number :+91-11-23978046 Toll Free : 1075 Helpline Email ID : ncov2019@gov.in -->
+          <div class="col-xl-12 mt-4 col-md-12 mb-12">
+            <div class="card border-left-danger shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Helpline number</div>
+                    <div class="h3 mb-0 mt-3 font-weight-bold text-gray-800">+91-11-23978046</div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-12 col-md-12 mb-12 mt-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Toll-free number</div>
+                    <div class="h3 mb-0 mt-3 font-weight-bold text-gray-800">1075</div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-12 col-md-12 mb-12 mt-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Helpline email ID</div>
+                    <div class="h3 mb-0 mt-3 font-weight-bold text-gray-800">ncov2019@gov.in</div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
-         <!-- stats section end -->
+          <!-- contact section end -->
 
         </div>
         <!-- /.container-fluid -->
@@ -227,6 +261,8 @@
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
   <script src="myjs/statsjs.js"></script>
+  
+  
   <script>
     function searc()
     {
